@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang='cs' data-bs-theme="dark">
+
+<head>
+    <title>Česko-Twitch slovník</title>
+    <link rel="icon" type="image/x-icon" href="https://fkomarek.eu/favicon.ico">
+    <meta charset='utf-8'>
+</head>
+<!-- CSS a JavaScript -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="./main.css">
+
+<body>
+
+    <!-- Support pro mobilní menu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div class="container">
+
+        <h1 class="center nadpis">Česko-Twitch slovník</h1>
+
+        <p>
+            Proč? Od roku 2021 se bavit s pár lidmi, co sledujou 12 hodin denně Twitch. Problém je, že používaj
+            divnoslova, kterym nerozumim. Začal jsem si tehdy jako vtip psát na papír slova co říkali a jejich význam,
+            co mi řekli. O 3 roky později jsem si na to vzpomněl, papír našel v šuplíku s pracovními smlouvami a jinými
+            důležitými dokumenty a zdigitalizoval jsem ho.
+        </p>
+
+        <h2>Slovník</h2>
+
+        <table class="table table-striped-columns table-hover table-dark">
+            <thead>
+                <tr>
+                    <td scope="col"><b id="streamer">Twitchovsky</b></td>
+                    <td scope="col"><b>Česky</b></td>
+                </tr>
+            </thead>
+            <tr>
+                <td>DDHUH</td>
+                <td>jsem zmatený</td>
+            </tr>
+            <tr>
+                <td>Peepo leave</td>
+                <td>Odejití</td>
+            </tr>
+            <tr>
+                <td>5Head</td>
+                <td>Chytrost (megamysl)</td>
+            </tr>
+            <tr>
+                <td>kekw</td>
+                <td>smích</td>
+            </tr>
+            <tr>
+                <td>susge</td>
+                <td>sus - podezřelý</td>
+            </tr>
+            <tr>
+                <td>omegalul</td>
+                <td>velký smích</td>
+            </tr>
+            <tr>
+                <td>copium</td>
+                <td>víra v něco, co se asi nestane</td>
+            </tr>
+            <tr>
+                <td>pog, poggers</td>
+                <td>hustý</td>
+            </tr>
+            <tr>
+                <td>pausechamp</td>
+                <td>očekávání</td>
+            </tr>
+            <tr>
+                <td>smh</td>
+                <td>shake my head (netušim co to sakra znamená, pomoc)</td>
+            </tr>
+        </table>
+
+        <p>
+            Návrh na změnu: <a href="https://git.envs.net/fkomarek/twitch-slovnik.fkomarek.eu/issues" target="_blank">https://git.envs.net/fkomarek/twitch-slovnik.fkomarek.eu/issues</a><br>
+            Zdrojový kód: <a href="https://git.envs.net/fkomarek/twitch-slovnik.fkomarek.eu" target="_blank">https://git.envs.net/fkomarek/twitch-slovnik.fkomarek.eu</a>
+        </p>
+
+        <h3>Autoři</h3>
+        <p>
+            Autor: Filip Komárek (Filip2cz)<br>
+            Ti, kvůli kterým jsem to udělal a co mi zdělili co co znamená: Hedwika, Rákosníček, Šmoula
+        </p>
+
+        <script>
+            // Seznam slov
+            const words = ["Agraelovsky", "Herdynovsky", "Flygunovsky", "Martino-Rotovsky", "Sibiřansky", "Amouranthsky", "Shil0usky", "Natalkaovsky", "dino_dodovsky", "Torenovsky", "Patriko-Kořenářsky"];
+            
+            // Funkce pro výběr náhodného slova
+            function getRandomWord() {
+              return words[Math.floor(Math.random() * words.length)];
+            }
+            
+            // Funkce pro vložení náhodného slova do elementu s id "streamer"
+            function displayRandomWord() {
+              const streamerElement = document.getElementById("streamer");
+              streamerElement.textContent = getRandomWord();
+            }
+            
+            // Volání funkce pro zobrazení náhodného slova při načtení stránky
+            displayRandomWord();
+
+            setInterval(displayRandomWord, 10000);
+            </script>
+
+    </div>
+
+</body>
+
+</html>
