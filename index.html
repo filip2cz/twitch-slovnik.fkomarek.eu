@@ -89,24 +89,24 @@
         <h3>Autoři</h3>
         <p>
             Autor: Filip Komárek (Filip2cz)<br>
-            Ti, kvůli kterým jsem to udělal a co mi zdělili co co znamená: Hedwika, Rákosníček, Šmoula
+            Ti, kvůli kterým jsem to udělal a co mi zdělili co co znamená: Hedwika, Rákosníček, Šmoula, TomBEJS
         </p>
 
         <script>
             // Seznam slov
             const words = ["Agraelovsky", "Herdynovsky", "Flygunovsky", "Martino-Rotovsky", "Sibiřansky", "Amouranthsky", "Shil0usky", "Natalkaovsky", "dino_dodovsky", "Torenovsky", "Patriko-Kořenářsky"];
-            
+
             // Funkce pro výběr náhodného slova
             function getRandomWord() {
               return words[Math.floor(Math.random() * words.length)];
             }
-            
+
             // Funkce pro vložení náhodného slova do elementu s id "streamer"
             function displayRandomWord() {
               const streamerElement = document.getElementById("streamer");
               streamerElement.textContent = getRandomWord();
             }
-            
+
             // Volání funkce pro zobrazení náhodného slova při načtení stránky
             displayRandomWord();
 
